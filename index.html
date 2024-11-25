@@ -6,6 +6,27 @@
   />
   <title>Cache Bank Landing Page</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.6.1/countUp.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const options = { duration: 2 }; // Animation duration in seconds
+
+        const count1 = new CountUp('countto1', 250, options);
+        const count2 = new CountUp('countto2', 12, options);
+        const count3 = new CountUp('countto3', 2600, options);
+        const count4 = new CountUp('countto4', 18000, options);
+
+        // Check if animations can run
+        if (!count1.error) {
+            count1.start();
+            count2.start();
+            count3.start();
+            count4.start();
+        } else {
+            console.error(count1.error);
+        }
+    });
+</script>
   <script>
     tailwind.config = {
       theme: {
